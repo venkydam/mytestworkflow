@@ -50,6 +50,7 @@ jobs:
     if: ${{ needs.release-check.outputs.published == 'false' }}
     runs-on: ubuntu-latest
     permissions:
+      id-token: write
       contents: write
     defaults:
       run:
